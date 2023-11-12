@@ -9,25 +9,28 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.perpetualmotion.R;
 import com.example.perpetualmotion.databinding.ActivityMainBinding;
+import com.example.perpetualmotion.databinding.MainIncludeActivityBottomBarAndFabBinding;
+import com.example.perpetualmotion.databinding.MainIncludeContentBoardBinding;
 import com.google.android.material.snackbar.Snackbar;
 import com.mintedtech.perpetual_motion.pm_game.PMGame;
 
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
-
+    private MainIncludeActivityBottomBarAndFabBinding bottomBarAndFabBinding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
+        bottomBarAndFabBinding = MainIncludeActivityBottomBarAndFabBinding.bind(binding.getRoot());
         setContentView(binding.getRoot());
 
-        setSupportActionBar(binding.toolbar);
+        setSupportActionBar(binding.includeActivityToolbar.toolbar);
 
         PMGame pmGame;
 
-        binding.fab.setOnClickListener(new View.OnClickListener() {
+        bottomBarAndFabBinding.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
