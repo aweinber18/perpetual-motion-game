@@ -34,6 +34,6 @@
     <string name="error_cannot_discard_from_empty_pile">Cannot discard from an empty pile</string>
     <string name="msg_game_already_ended">Game has already ended</string>
     <string name="fab">FAB</string>
-	<string name="dp_level">base</string>
+    <string name="dp_level">base</string>
 
 </resources>

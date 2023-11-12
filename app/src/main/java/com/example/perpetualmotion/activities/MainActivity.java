@@ -1,4 +1,4 @@
-package com.example.perpetualmotion;
+package com.example.perpetualmotion.activities;
 
 import android.os.Bundle;
 import android.view.Menu;
@@ -7,6 +7,7 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.perpetualmotion.R;
 import com.example.perpetualmotion.databinding.ActivityMainBinding;
 import com.google.android.material.snackbar.Snackbar;
 import com.mintedtech.perpetual_motion.pm_game.PMGame;
