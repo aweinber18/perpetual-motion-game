@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
     private MainIncludeActivityBottomBarAndFabBinding bottomBarAndFabBinding;
+    private Snackbar mSnackbar;
+    private View mSnackbarView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,8 +30,9 @@ public class MainActivity extends AppCompatActivity {
 
         setSupportActionBar(binding.includeActivityToolbar.toolbar);
 
-        PMGame pmGame;
-
+        mSnackbarView = findViewById(android.R.id.content);
+        mSnackbar = Snackbar.make(mSnackbarView, "Welcome!", Snackbar.LENGTH_LONG);
+        mSnackbar.setText("Bonjour!").show();
         bottomBarAndFabBinding.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,6 +55,9 @@ public class MainActivity extends AppCompatActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
+        if (mSnackbar.isShown())
+            mSnackbar.dismiss();
+
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
