@@ -11,5 +11,4 @@
     <include layout="@layout/main_include_content_button_bar"
         android:id="@+id/button_bar" />
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>
